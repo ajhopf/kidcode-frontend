@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Course from './components/pages/Course';
 import Registration from './components/pages/Registration';
+import Admin from './components/pages/Admin';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/header.css';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/course/:courseId" element={<Course />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );

@@ -4,7 +4,7 @@ import AppFooter from '../organisms/AppFooter';
 
 export default function Default(props) {
   return (
-    <div>
+    <div className="default">
       <AppHeader />
       {props.children}
       <AppFooter />
