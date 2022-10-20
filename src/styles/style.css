@@ -3,7 +3,6 @@
   --orange-hover: rgb(241, 181, 161);
 }
 
-
 /*Fontes
 
 font-family: 'Bubblegum Sans', cursive;
@@ -16,6 +15,12 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+main {
+  margin-top: 100px;
+  min-height: calc(100vh - 200px );
+}
+
 
 p{
   font-family: 'Nunito', sans-serif;
