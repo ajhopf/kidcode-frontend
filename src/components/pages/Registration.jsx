@@ -2,6 +2,32 @@ import React from 'react';
 import Default from '../templates/Default';
 
 export default function Registration() {
+  const [endereco, setEndereco] = React.useState('');
+
+  function buscaCEP(cep) {
+    const cepFormatado = cep // <-- cep não formatadocep.replace(/\D/g, '')
+      .replace(/(\d{5})(\d)/, '$1-$2')
+      .replace(/(-\d{3})\d+?$/, '$1');
+
+    fetch(`https://viacep.com.br/ws/${cepFormatado}/json/`)
+      .then(resp => resp.json())
+      .then(dados => {
+        console.log(dados);
+
+        document.querySelector('#rua').value = dados.logradouro;
+        document.querySelector('#numero').focus();
+        document.querySelector('#bairro').value = dados.bairro;
+        document.querySelector('#cidade').value = dados.localidade;
+        document.querySelector('#estado').value = dados.uf;
+      });
+  }
+
+  React.useEffect(() => {
+    if (endereco) {
+      buscaCEP(endereco);
+    }
+  });
+
   return (
     <Default>
       <main className="main-container">
@@ -47,7 +73,9 @@ export default function Registration() {
                 size="10em"
                 id="endereco"
                 placeholder="00000-000"
-                onblur="buscaCEP(this.value)"
+                onBlur={event => {
+                  setEndereco(event.target.value);
+                }}
               />
             </div>
             <br />

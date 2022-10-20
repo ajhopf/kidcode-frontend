@@ -68,9 +68,9 @@ export default function Course() {
           <iframe
             src="https://www.youtube.com/embed/bV8pNLmPonE"
             title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            frameBorder="0"
+            /*allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/
+            allowFullScreen
           ></iframe>
           <span id="conteudo"></span>
 

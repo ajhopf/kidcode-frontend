@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Default from '../templates/Default';
 
@@ -12,7 +11,6 @@ import codingKid from '../../images/cursos/codingkid.png';
 export default function Course() {
   React.useEffect(() => {
     const cursoPrimeiro = document.querySelector('.card.primeiro');
-    console.log(cursoPrimeiro);
 
     cursoPrimeiro.addEventListener('click', () => {
       window.location.href = '/course/1';
