@@ -9,13 +9,12 @@ font-family: 'Bubblegum Sans', cursive;
 font-family: 'Nunito', sans-serif;
 */
 
-html, body {
-  margin: 0;
+/* html, body {
+  margin: 0; */
   /*Esta parte é para não criar scroll para a direita, que estava acontecendo em alguns tamanhos de tela*/
-  max-width: 100%;
+  /* max-width: 100%;
   overflow-x: hidden;
-  
-}
+} */
 
 p {
   font-family: 'Nunito', sans-serif;
@@ -25,9 +24,12 @@ p {
 
 /*Banner*/
 
+
 .banner {
   background-color: rgb(229, 228, 228);
-  margin-top: 100px;
+  margin-top: 110px;
+ 
+ 
 }
 
 .banner h1 {
@@ -35,6 +37,7 @@ p {
   letter-spacing: 3px;
   font-size: 2.5rem;
   font-weight: bold;
+
 }
 
 .banner p {

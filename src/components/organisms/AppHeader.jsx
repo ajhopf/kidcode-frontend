@@ -1,34 +1,47 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import logo from '../../images/logo-laranja.png';
 
 export default function AppHeader() {
+  React.useEffect(() => {
+    const menu = document.querySelector('#mobile-menu');
+
+    //criando variável para o nav, para poder alterar o posicionamento dele
+    const nav = document.querySelector('.nav-container');
+
+    /*adicionar eventListener para fazer com que Link classa .active seja adiciona ao nav-container, fazendo com que seu posicionamento seja alterado (via css)*/
+
+    menu.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      menu.classList.toggle('is-active');
+    });
+  });
+
   return (
     <header className="header-container">
-      <a href="./index.html">
-        <img
-          className="logo"
-          src="./assets/imagens/logo-laranja.png"
-          alt="kidcode logo"
-        />
-      </a>
+      <Link to="/">
+        <img className="logo" src={logo} alt="kidcode logo" />
+      </Link>
       <nav className="nav-container">
         <ul>
           <li>
-            <a href="#">Sobre nós</a>
+            <Link to="/">Sobre nós</Link>
           </li>
           <li>
-            <a href="./curso.html">Cursos</a>
+            <Link to="/course/1">Cursos</Link>
           </li>
           <li>
-            <a href="#">Porque programar?</a>
+            <Link to="/">Porque programar?</Link>
           </li>
           <li>
-            <a href="#">Educadores</a>
+            <Link to="/">Educadores</Link>
           </li>
           <li>
-            <a href="./cadastro.html">Cadastro</a>
+            <Link to="/registration">Cadastro</Link>
           </li>
           <li>
-            <a href="#">Área do Aluno</a>
+            <Link to="/">Área do Aluno</Link>
           </li>
         </ul>
       </nav>
