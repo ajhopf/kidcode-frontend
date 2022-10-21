@@ -10,6 +10,7 @@ import './styles/header.css';
 import './styles/footer.css';
 import './styles/cadastro.css';
 import './styles/curso.css';
+import './styles/admin.css';
 import './styles/style.css';
 
 function App() {

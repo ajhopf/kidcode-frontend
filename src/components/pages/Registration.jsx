@@ -26,7 +26,7 @@ export default function Registration() {
     if (endereco) {
       buscaCEP(endereco);
     }
-  });
+  }, [endereco]);
 
   return (
     <Default>

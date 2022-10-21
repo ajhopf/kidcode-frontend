@@ -15,7 +15,7 @@ export default function Course() {
     cursoPrimeiro.addEventListener('click', () => {
       window.location.href = '/course/1';
     });
-  });
+  }, []);
 
   return (
     <Default>
