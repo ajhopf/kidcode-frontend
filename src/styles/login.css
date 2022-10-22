@@ -1,0 +1,12 @@
+#form-all {
+    height: 100%;
+    width: 100%;
+    margin-top: 15em;
+    margin-bottom: 15em;
+    margin-left: 5em;
+    margin-right: 8em;
+}
+
+.enter-data {
+    width: 30em;
+}

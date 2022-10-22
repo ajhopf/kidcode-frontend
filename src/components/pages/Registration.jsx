@@ -14,11 +14,11 @@ export default function Registration() {
       .then(dados => {
         console.log(dados);
 
-        document.querySelector('#rua').value = dados.logradouro;
-        document.querySelector('#numero').focus();
-        document.querySelector('#bairro').value = dados.bairro;
-        document.querySelector('#cidade').value = dados.localidade;
-        document.querySelector('#estado').value = dados.uf;
+        document.querySelector('.rua').value = dados.logradouro;
+        document.querySelector('.numero').focus();
+        document.querySelector('.bairro').value = dados.bairro;
+        document.querySelector('.cidade').value = dados.localidade;
+        document.querySelector('.estado').value = dados.uf;
       });
   }
 
@@ -36,42 +36,41 @@ export default function Registration() {
 
           <form action="cadastro_de_usuarios" method="post">
             <div>
-              <label htmlFor="nome">Nome Completo do Responsável:</label> <br />
+              <label htmlFor="nome">Nome Completo do Responsável: </label> 
               <input
                 type="text"
                 size="55em"
-                id="nome"
+                className="nome"
                 placeholder="Nome Completo"
               />
             </div>
             <br />
             <div>
-              <label htmlFor="email">E-mail:</label>
+              <label htmlFor="email">E-mail: </label>
               <input
                 type="email"
                 size="35em"
-                id="email"
+                className="email"
                 placeholder="email@exemplo.com.br"
               />
             </div>
             <br />
             <div>
-              <label htmlFor="nome">Nome do filho(a):</label>
-              <br />
+              <label htmlFor="nome">Nome do filho(a): </label>
               <input
                 type="text"
                 size="55em"
-                id="nome"
+                className="nome"
                 placeholder="Nome do filho(a)"
               />
             </div>
             <br />
             <div>
-              <label htmlFor="endereco">Digite seu CEP:</label>
+              <label htmlFor="endereco">Digite seu CEP: </label>
               <input
                 type="text"
                 size="10em"
-                id="endereco"
+                className="endereco"
                 placeholder="00000-000"
                 onBlur={event => {
                   setEndereco(event.target.value);
@@ -80,46 +79,46 @@ export default function Registration() {
             </div>
             <br />
             <div>
-              <label htmlFor="rua">Rua:</label>
-              <input type="text" size="45em" id="rua" name="rua" />
+              <label htmlFor="rua">Rua: </label>
+              <input type="text" size="45em" className="rua" name="rua" />
             </div>
             <br />
             <div>
-              <label htmlFor="numero">Número:</label>
-              <input type="text" size="6em" id="numero" name="numero" />
+              <label htmlFor="numero">Número: </label>
+              <input type="text" size="6em" className="numero" name="numero" />
             </div>
             <br />
             <div>
-              <label htmlFor="bairro">Bairro:</label>
-              <input type="text" size="30em" id="bairro" name="bairro" />
+              <label htmlFor="bairro">Bairro: </label>
+              <input type="text" size="30em" className="bairro" name="bairro" />
             </div>
             <br />
             <div>
-              <label htmlFor="cidade">Cidade</label>
-              <input type="text" size="40em" id="cidade" name="cidade" />
+              <label htmlFor="cidade">Cidade: </label>
+              <input type="text" size="40em" className="cidade" name="cidade" />
             </div>
             <br />
             <div>
-              <label htmlFor="estado">Estado</label>
-              <input type="text" size="4em" id="estado" name="estado" />
+              <label htmlFor="estado">Estado: </label>
+              <input type="text" size="4em" className="estado" name="estado" />
             </div>
             <br />
             <div>
-              <label htmlFor="senha">Senha:</label>
+              <label htmlFor="senha">Senha: </label>
               <input
                 type="password"
                 size="25em"
-                id="senha"
+                className="senha"
                 placeholder="Mínimo de 8 caracteres"
               />
             </div>
             <br />
             <div>
-              <label htmlFor="senha">Repita sua senha:</label>
+              <label htmlFor="senha">Repita sua senha: </label>
               <input
                 type="password"
                 size="25em"
-                id="senha"
+                className="senha"
                 placeholder="Digite novamente a senha"
               />
             </div>

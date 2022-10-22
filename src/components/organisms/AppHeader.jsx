@@ -41,7 +41,7 @@ export default function AppHeader() {
             <Link to="/registration">Cadastro</Link>
           </li>
           <li>
-            <Link to="/">Área do Aluno</Link>
+            <Link to="/login">Área do Aluno</Link>
           </li>
         </ul>
       </nav>
