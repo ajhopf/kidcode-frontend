@@ -15,23 +15,22 @@ export default function UserListItem(props) {
       <Card sc={{ maxWidth: 345 }}>
         <CardMedia
           component="img"
-          height="140"
+          height="300"
           image={user.photo}
           alt="green iguana"
         />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {user.name}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="div">
+            Email: {user.email}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="div">
+            Membro desde: {user.createdAt}
+          </Typography>
+        </CardContent>
       </Card>
-
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {user.name}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          Email: {user.email}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          Membro desde: {user.createdAt}
-        </Typography>
-      </CardContent>
     </ListItem>
   );
 }
