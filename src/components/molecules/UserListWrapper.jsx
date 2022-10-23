@@ -6,7 +6,7 @@ export default function UserListWrapper(props) {
   const users = props.users;
 
   return (
-    <div className="users">
+    <div className="usersListWrapper">
       <h1>Usuários</h1>
       <List>
         {users.map((user, index) => (

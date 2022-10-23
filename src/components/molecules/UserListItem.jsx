@@ -11,7 +11,7 @@ export default function UserListItem(props) {
   const user = props.user;
 
   return (
-    <ListItem>
+    <ListItem className="userListItem">
       <Card sc={{ maxWidth: 345 }}>
         <CardMedia
           component="img"
