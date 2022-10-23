@@ -4,10 +4,12 @@ import SideMenu from '../organisms/SideMenu';
 
 export default function LoggedArea(props) {
   return (
-    <>
+    <div className="loggedArea">
       <SideMenu />
-      <LoggedHeader />
-      <div className="appMain">{props.children}</div>
-    </>
+      <div className="appMain">
+        <LoggedHeader />
+        {props.children}
+      </div>
+    </div>
   );
 }

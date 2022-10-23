@@ -1,6 +1,7 @@
 import React from 'react';
-import Default from '../templates/Default';
+import LoggedArea from '../templates/LoggedArea.jsx';
 import UserListWrapper from '../molecules/UserListWrapper';
+import SideMenu from '../organisms/SideMenu.jsx';
 
 export default function Admin() {
   const [users, setUsers] = React.useState([]);

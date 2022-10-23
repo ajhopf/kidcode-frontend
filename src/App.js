@@ -4,6 +4,7 @@ import Home from './components/pages/Home';
 import Course from './components/pages/Course';
 import Registration from './components/pages/Registration';
 import Admin from './components/pages/Admin';
+import AdminLogin from './components/pages/AdminLogin';
 import Login from './components/pages/Login';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,6 +15,8 @@ import './styles/curso.css';
 import './styles/admin.css';
 import './styles/style.css';
 import './styles/login.css';
+
+import './styles/LoggedArea.css';
 
 function App() {
   return (

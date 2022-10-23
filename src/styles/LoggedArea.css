@@ -1,3 +1,16 @@
+.loggedArea {
+  min-height: 100vh;
+}
+
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  background-color: #253053;
+}
+
 .appMain {
   padding-left: 320px;
   width: 100%;

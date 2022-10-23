@@ -1,4 +1,8 @@
-.users {
+.usersListWrapper {
   text-align: center;
-  max-height: 1px;
+  height: 1px;
+}
+
+.userListItem {
+  max-height: 100%;
 }
