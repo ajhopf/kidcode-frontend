@@ -22,11 +22,8 @@ export default function Admin() {
   }, []);
 
   return (
-    <Default>
-      <main className="admin">
-        <input type="text"></input>
-        <UserListWrapper users={users} />
-      </main>
-    </Default>
+    <LoggedArea>
+      <UserListWrapper users={users} />
+    </LoggedArea>
   );
 }
