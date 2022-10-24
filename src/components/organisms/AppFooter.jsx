@@ -5,7 +5,7 @@ export default function AppFooter() {
   return (
     <footer className="footer-container">
       <img className="logo" src={logo} alt="Kidcode logo" />
-      <p>Copyright Kicode &#174</p>
+      <p>Copyright Kicode &#174;</p>
     </footer>
   );
 }
