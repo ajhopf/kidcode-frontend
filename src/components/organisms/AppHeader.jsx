@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../images/logo-laranja.png';
 
-export default function AppHeader() {
+export default function AppHeader(props) {
   React.useEffect(() => {
     const menu = document.querySelector('#mobile-menu');
 
@@ -23,28 +23,7 @@ export default function AppHeader() {
       <Link to="/">
         <img className="logo" src={logo} alt="kidcode logo" />
       </Link>
-      <nav className="nav-container">
-        <ul>
-          <li>
-            <Link to="/">Sobre nós</Link>
-          </li>
-          <li>
-            <Link to="/course/1">Cursos</Link>
-          </li>
-          <li>
-            <Link to="/">Porque programar?</Link>
-          </li>
-          <li>
-            <Link to="/">Educadores</Link>
-          </li>
-          <li>
-            <Link to="/registration">Cadastro</Link>
-          </li>
-          <li>
-            <Link to="/login">Área do Aluno</Link>
-          </li>
-        </ul>
-      </nav>
+      {props.children}
       {/*Esta parte é referente ao menu hamburguer para telas menores*/}
       <div className="menu-toggle" id="mobile-menu">
         <span className="bar"></span>

@@ -7,24 +7,21 @@ import CardContent from '@mui/material/CardContent';
 //import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import Image from 'react-bootstrap/Image';
-
-export default function UserListItem(props) {
-  const user = props.user;
+export default function CourseListItem(props) {
+  const course = props.course;
 
   return (
-    <ListItem className="userListItem">
+    <ListItem className="courseListItem">
       <Card sc={{ maxWidth: 345 }}>
         <CardContent>
-          <Image src={user.photo} roundedCircle={true} />
           <Typography gutterBottom variant="h5" component="div">
-            {user.name}
+            {course.name}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            Email: {user.email}
+            Idade: {course.age}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            Membro desde: {user.createdAt}
+            Membro desde: {course.createdAt}
           </Typography>
         </CardContent>
       </Card>

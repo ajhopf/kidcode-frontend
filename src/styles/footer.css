@@ -4,6 +4,7 @@
 .footer-container {
   display: flex;
   background-color: var(--laranja-principal);
+ 
 }
 
 .footer-container img {

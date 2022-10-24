@@ -1,7 +1,7 @@
 .loggedArea {
   min-height: 100vh;
 }
-
+/* 
 .sideMenu {
   display: flex;
   flex-direction: column;
@@ -9,10 +9,34 @@
   width: 320px;
   height: 100%;
   background-color: #253053;
+} */
+
+/*Header*/
+
+.app-header {
+  display: flex;
+  background-color: var(--laranja-principal);
 }
 
+.app-header__logo {
+  margin-right: auto;
+}
+
+.app-header__logo img {
+  max-width: 120px;
+}
+
+.app-header__menu {
+  font-size: 3em;
+}
+
+.app-header__menu:hover {
+  cursor: pointer;
+}
+
+
 .appMain {
-  padding-left: 320px;
+  /* padding-left: 320px; */
   width: 100%;
   height: 100%
 }
