@@ -1,18 +1,24 @@
 import React from 'react';
+
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+
 import UserListItem from './UserListItem';
-import { List } from '@mui/material';
 
 export default function UserListWrapper(props) {
   const users = props.users;
 
   return (
-    <div className="usersListWrapper">
+    <div className="text-center">
       <h1>Usuários</h1>
-      <List>
-        {users.map((user, index) => (
-          <UserListItem user={user} key={index} />
-        ))}
-      </List>
+
+      <Container>
+        <Row>
+          {users.map((user, index) => (
+            <UserListItem user={user} />
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 }

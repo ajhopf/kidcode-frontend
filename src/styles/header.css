@@ -123,6 +123,7 @@
     top: 30%;
     right: 5%;
     cursor: pointer;
+   
   }
   /*Transforma o diplay de inline para block, fazendo com que ele apareça mesmo sem */
   .menu-toggle .bar {

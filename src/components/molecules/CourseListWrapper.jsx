@@ -6,7 +6,7 @@ export default function CourseListWrapper(props) {
   const courses = props.courses;
 
   return (
-    <div className="usersListWrapper">
+    <div>
       <h1>Cursos</h1>
       <List>
         {courses.map((course, index) => (

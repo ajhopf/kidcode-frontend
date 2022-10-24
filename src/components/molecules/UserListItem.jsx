@@ -1,33 +1,29 @@
 import React from 'react';
-import { ListItem } from '@mui/material';
-import Card from '@mui/material/Card';
-//import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-
-//import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-
-import Image from 'react-bootstrap/Image';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 
 export default function UserListItem(props) {
   const user = props.user;
 
   return (
-    <ListItem className="userListItem">
-      <Card sc={{ maxWidth: 345 }}>
-        <CardContent>
-          <Image src={user.photo} roundedCircle={true} />
-          <Typography gutterBottom variant="h5" component="div">
-            {user.name}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            Email: {user.email}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            Membro desde: {user.createdAt}
-          </Typography>
-        </CardContent>
+    <Col xs={10} md={6}>
+      <Card className="bg-light">
+        <Card.Img
+          variant="top"
+          className="mx-auto rounded-circle"
+          src={user.photo}
+          alt={user.name}
+          style={{ height: '100x', width: '100px' }}
+        />
+
+        <Card.Body>
+          <Card.Title>{user.name}</Card.Title>
+          <Card.Text>
+            <p>Email: {user.email}</p>
+            <p>Membro desde: {user.createdAt}</p>
+          </Card.Text>
+        </Card.Body>
       </Card>
-    </ListItem>
+    </Col>
   );
 }

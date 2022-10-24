@@ -1,0 +1,79 @@
+/*Banner*/
+
+.banner-container {
+  text-align: center;
+  background-color: rgb(229, 228, 228);
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container img {
+  
+  max-width: 80%;
+  max-height: 75%;
+  border-radius: 5px;
+  margin: 30px auto;
+}
+
+.banner-container h1 {
+  z-index: 10;
+  position: absolute;
+  bottom: 50px;
+  font-family: 'Bubblegum Sans', cursive;
+  letter-spacing: 3px;
+  font-size: 3rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+@media screen and (min-width: 1430px) {
+  .banner-container img{
+    max-height: 80vh;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .banner-container h1{
+    font-size: 2rem;
+    width: 300px;
+    bottom: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  }
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*Seção de cursos*/
+
+/*título Nossos Cursos*/
+
+.nossosCursos {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+/*Estilização dos cards*/
+
+.homeCard {
+  background-color: #f0a041;
+  color: #fff;
+  border-radius: 10px;
+  filter: grayscale(50%);  
+}
+
+.homeCard:hover {
+  filter: none;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+
+

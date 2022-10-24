@@ -13,7 +13,7 @@ export default function LoggedArea(props) {
         <LoggedNav setOption={setOption} />
       </AppHeader>
 
-      <div className="appMain">{props.children}</div>
+      <main>{props.children}</main>
       <AppFooter />
     </div>
   );
