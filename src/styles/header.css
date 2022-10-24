@@ -65,7 +65,7 @@
   border-radius: 4px;
 }
 
-@media screen and (max-width: 1035px) {
+@media screen and (max-width: 1200px) {
   
   /*Declarar position como relative no nav-container para poder posicionar seu filhos relativo a ele*/
   .nav-container {
