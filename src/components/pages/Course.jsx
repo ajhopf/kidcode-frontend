@@ -3,8 +3,29 @@ import React from 'react';
 import Default from '../templates/Default';
 import bannerImage from '../../images/cursos/kid-computer.jpg';
 
+import { useParams } from 'react-router-dom';
+
 export default function Course() {
-  return (
+  const { courseId } = useParams();
+
+  const [course, setCourse] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const endpoint = `http://localhost:8000/courses/${courseId}`;
+
+    fetch(endpoint)
+      .then(response => response.json())
+      .then(data => {
+        setCourse(data.findCourse);
+        console.log(course);
+        setIsLoading(false);
+      });
+  }, []);
+
+  return isLoading ? (
+    <div></div>
+  ) : (
     <Default>
       <main>
         {/*banner using bootstrap*/}
@@ -21,9 +42,9 @@ export default function Course() {
 
           {/*Texto*/}
           <div className="col-12 col-md-5 pb-5 px-4 px-md-5 pb-md-0 d-flex flex-column">
-            <h1 className="text-center">Programação com Scratch</h1>
+            <h1 className="text-center">{course.name}</h1>
             <p className="text-center">
-              Dê os seus primeiros passos em programação!
+              {course?.description?.smallDescription}
             </p>
 
             {/*Botões*/}
@@ -63,7 +84,7 @@ export default function Course() {
         <section className="conteudo-container container-fluid p-0">
           <h2 className="my-3">Conteúdos</h2>
 
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p>{course?.description?.completeDescription}</p>
 
           <iframe
             src="https://www.youtube.com/embed/bV8pNLmPonE"
@@ -76,7 +97,7 @@ export default function Course() {
 
           <div className="row justify-content-center my-5">
             <div className="col-10 col-md-5 m-1 border rounded">
-              <h4>Conteúdo 1</h4>
+              <h4>{course.subjects.languages[0]}</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consectetur sed autem exercitationem tenetur dolor eligendi,
