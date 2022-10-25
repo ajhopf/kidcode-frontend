@@ -4,6 +4,7 @@ import Default from '../templates/Default';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 
 export default function login() {
   return (
@@ -35,6 +36,9 @@ export default function login() {
         <Button variant="primary" type="submit">
           Entrar
         </Button>
+        <Link to="/registration" className="py-3">
+          Não tem cadastro? Faça já aqui!
+        </Link>
       </main>
     </Default>
   );
