@@ -3,86 +3,101 @@
     --orange-hover: rgb(241, 181, 161);
 }
   
-  /*Fontes
-  
-  font-family: 'Bubblegum Sans', cursive;
-  font-family: 'Nunito', sans-serif;
-  */
-  
-  
-/*Tive que colocar no main-container pois estava afetando toda a aplicação
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-}
-   */
-.main-container {
-    padding-top: 100px;
-    margin: 0;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: #fbf8f6;
-    /*background-image: linear-gradient(62deg, #aca29c 0%, #f7f4ee 100%);*/
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #6c757d;
+    --bs-btn-border-color: #6c757d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #5c636a;
+    --bs-btn-hover-border-color: #565e64;
+    --bs-btn-focus-shadow-rgb: 130,138,145;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #565e64;
+    --bs-btn-active-border-color: #51585e;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #6c757d;
+    --bs-btn-disabled-border-color: #6c757d;
 }
 
-.title-sign-up {
-    text-align: center;
+.FormGroup-controling {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.375rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-section.sign-up-container {
-    /*display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);*/
-    background: rgba(255, 255, 255, 0.28);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3.9px);
-    -webkit-backdrop-filter: blur(3.9px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 0px 13px -5px #000000;
+.carding {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: #fff;
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
+
+.FormGroup-select {
+  width: 100%;
+}
+
+.btn-secondary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
     width: 100%;
-    max-width: 600px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    box-sizing: border-box;
-    padding-top: 30px;
-    padding-bottom: 60px;
-    padding-left: 25px;
-    padding-right: 25px;
-    z-index: 1;
-    font-family: 'Nunito', sans-serif;
-    /*position: relative;*/
-    /*adicionei para o form ficar centralizado*/
-    /*text-align: center;*/
 }
 
-
-.send {
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    font-family: 'Bubblegum Sans', cursive;
-    font-size: 20px;
-    filter: grayscale(80%);
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-  
-.send:hover{
-    filter: none;
-    cursor: pointer;
+.input-grouping {
+    position: relative;
 }
 
+.fix-table {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+.input-group .btn {
+  position: relative;
+  z-index: 2;
+}
