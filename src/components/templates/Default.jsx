@@ -4,10 +4,22 @@ import AppFooter from '../organisms/AppFooter';
 import MainNav from '../molecules/MainNav';
 
 export default function Default(props) {
+  const [courses, setCourses] = React.useState([]);
+
+  React.useEffect(() => {
+    const coursesEndpoint = 'http://localhost:8000/courses/all';
+
+    fetch(coursesEndpoint)
+      .then(response => response.json())
+      .then(data => {
+        setCourses(data);
+      });
+  }, []);
+
   return (
     <div className="default">
       <AppHeader>
-        <MainNav />
+        <MainNav courses={courses} />
       </AppHeader>
       {props.children}
       <AppFooter />

@@ -1,16 +1,17 @@
 import React from 'react';
+import DropdownButton from './DropDownButton';
 import { Link } from 'react-router-dom';
 
-export default function MainHeader() {
+export default function MainNav(props) {
+  const courses = props.courses;
+
   return (
     <nav className="nav-container">
       <ul>
         <li>
           <Link to="/">Sobre nós</Link>
         </li>
-        <li>
-          <Link to="/course/1">Cursos</Link>
-        </li>
+        <DropdownButton courses={courses} />
         <li>
           <Link to="/">Porque programar?</Link>
         </li>

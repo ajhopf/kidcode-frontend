@@ -84,7 +84,9 @@ export default function Course() {
         <section className="conteudo-container container-fluid p-0">
           <h2 className="my-3">Conteúdos</h2>
 
-          <p>{course?.description?.completeDescription}</p>
+          <p className="fs-5 mx-md-5 my-5 px-5">
+            {course?.description?.completeDescription}
+          </p>
 
           <iframe
             src="https://www.youtube.com/embed/bV8pNLmPonE"
