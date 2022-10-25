@@ -17,10 +17,12 @@
 
 /*Navegação*/
 
-.nav-container{
+.nav-container {
   align-items: center;
   display: flex;
+  
 }
+
 
 .nav-container ul {
   position: absolute;
@@ -29,7 +31,7 @@
   padding-right: 30px;
 }
 
-.nav-container li {
+.nav-container ul > li {
   display: inline;
   padding: 15px;
   list-style: none;
