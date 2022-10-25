@@ -31,7 +31,7 @@
   padding-right: 30px;
 }
 
-.nav-container ul > li {
+.nav-container ul li {
   display: inline;
   padding: 15px;
   list-style: none;
@@ -104,8 +104,10 @@
     transition: all 0.5s ease;    ;
   }
 
+ 
+
   /*Fazendo com que os itens fiquem um em cima do outro e ocupem 100% da tela*/
-  .nav-container li {
+  .nav-container ul li {
     text-align: center;
     line-height: 60px;
     width: 100%;

@@ -6,11 +6,15 @@ import AppFooter from '../organisms/AppFooter';
 
 export default function LoggedArea(props) {
   const setOption = props.setOption;
+  const [isHeaderActive, setIsHeaderActive] = React.useState(false);
 
   return (
     <div className="loggedArea">
-      <AppHeader>
-        <LoggedNav setOption={setOption} />
+      <AppHeader
+        isHeaderActive={isHeaderActive}
+        setIsHeaderActive={setIsHeaderActive}
+      >
+        <LoggedNav setOption={setOption} isHeaderActive={isHeaderActive} />
       </AppHeader>
 
       <main>{props.children}</main>

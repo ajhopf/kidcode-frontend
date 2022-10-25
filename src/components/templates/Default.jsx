@@ -6,6 +6,8 @@ import MainNav from '../molecules/MainNav';
 export default function Default(props) {
   const [courses, setCourses] = React.useState([]);
 
+  const [isHeaderActive, setIsHeaderActive] = React.useState(false);
+
   React.useEffect(() => {
     const coursesEndpoint = 'http://localhost:8000/courses/all';
 
@@ -18,8 +20,11 @@ export default function Default(props) {
 
   return (
     <div className="default">
-      <AppHeader>
-        <MainNav courses={courses} />
+      <AppHeader
+        isHeaderActive={isHeaderActive}
+        setIsHeaderActive={setIsHeaderActive}
+      >
+        <MainNav courses={courses} isHeaderActive={isHeaderActive} />
       </AppHeader>
       {props.children}
       <AppFooter />

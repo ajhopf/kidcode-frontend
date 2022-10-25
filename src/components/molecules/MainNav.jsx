@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 export default function MainNav(props) {
   const courses = props.courses;
+  const isHeaderActive = props.isHeaderActive;
 
   return (
-    <nav className="nav-container">
+    <nav className={isHeaderActive ? 'nav-container active' : 'nav-container'}>
       <ul>
         <li>
           <Link to="/">Sobre nós</Link>
