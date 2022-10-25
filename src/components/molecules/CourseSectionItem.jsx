@@ -30,7 +30,6 @@ export default function CourseSectionItem(props) {
   const navigate = useNavigate();
 
   const handleCourseClick = e => {
-    console.log(course._id);
     const id = course._id;
     navigate(`./course/${id}`);
   };
@@ -51,19 +50,23 @@ export default function CourseSectionItem(props) {
 
       <div className="card-body">
         <Row className="mb-4">
-          <h3>{course.name}</h3>
+          <h2 className="fw-bold">{course.name}</h2>
         </Row>
 
         <Row className="mb-4 justify-content-center ">
-          {course.description.smallDescription}
+          <p className="fs-5">{course.description.smallDescription}</p>
         </Row>
       </div>
       <Row className="mb-4">
-        <Col>Valor: R${course.description.cost}</Col>
-        <Col>Carga horária: {course.description.duration}h</Col>
+        <Col>
+          <p className="fs-5">Valor: R${course.description.cost}</p>
+        </Col>
+        <Col>
+          <p className="fs-5">Carga horária: {course.description.duration}h</p>
+        </Col>
       </Row>
       <Row className="card-footer justify-content-center">
-        Idade: {course.age}
+        <p className="fs-5">Idade: {course.age}</p>
       </Row>
     </Col>
   );

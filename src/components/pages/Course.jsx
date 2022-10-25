@@ -18,10 +18,10 @@ export default function Course() {
       .then(response => response.json())
       .then(data => {
         setCourse(data.findCourse);
-        console.log(course);
+
         setIsLoading(false);
       });
-  }, []);
+  }, [course, courseId]);
 
   return isLoading ? (
     <div></div>
