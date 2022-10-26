@@ -4,33 +4,17 @@
   flex-direction: column;
   justify-content: space-between;
 }
-/* 
-
-/*Header*/
-
-.app-header {
-  display: flex;
-  background-color: var(--laranja-principal);
-}
-
-.app-header__logo {
-  margin-right: auto;
-}
-
-.app-header__logo img {
-  max-width: 120px;
-}
-
-.app-header__menu {
-  font-size: 3em;
-}
-
-.app-header__menu:hover {
-  cursor: pointer;
-}
-
 
 .appMain {
   width: 100%;
   height: 100%
+}
+
+/*usuarios*/
+
+.editIcon{
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }

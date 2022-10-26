@@ -1,10 +1,15 @@
+.loginMain {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #form-all {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 #form-all > [type="submit"] {
@@ -13,4 +18,9 @@
 
 .enter-data {
     width: 30em;
+}
+
+.naoAutorizado {
+    color: red;
+    font-size: 1.125rem;
 }

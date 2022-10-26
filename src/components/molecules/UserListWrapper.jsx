@@ -15,7 +15,7 @@ export default function UserListWrapper(props) {
       <Container>
         <Row>
           {users.map((user, index) => (
-            <UserListItem user={user} />
+            <UserListItem key={index} user={user} />
           ))}
         </Row>
       </Container>

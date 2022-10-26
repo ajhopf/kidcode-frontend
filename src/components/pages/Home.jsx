@@ -6,7 +6,7 @@ import BannerContainer from '../molecules/BannerContainer';
 
 export default function Course() {
   const [courses, setCourses] = React.useState([]);
-  const [isLoading, setIsLoading] = React.useState(true);
+  // const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
     const coursesEndpoint = 'http://localhost:8000/courses/all';
@@ -15,13 +15,14 @@ export default function Course() {
       .then(response => response.json())
       .then(data => {
         setCourses(data);
-        setIsLoading(false);
+        // setIsLoading(false);
       });
   }, []);
 
-  return isLoading ? (
-    <h1>Loading...</h1>
-  ) : (
+  // return isLoading ? (
+  //   <h1>Loading...</h1>
+  // ) : (
+  return (
     <Default courses={courses}>
       <main>
         {/*Banner principal do site*/}
