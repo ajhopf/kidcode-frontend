@@ -4,7 +4,7 @@ import UserListWrapper from '../molecules/UserListWrapper';
 import CourseListWrapper from '../molecules/CourseListWrapper.jsx';
 
 export default function Admin() {
-  const [option, setOption] = React.useState('');
+  const [option, setOption] = React.useState('users');
   const [users, setUsers] = React.useState([]);
   const [courses, setCourses] = React.useState([]);
 

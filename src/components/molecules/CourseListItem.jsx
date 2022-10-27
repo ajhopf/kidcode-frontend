@@ -21,7 +21,7 @@ export default function CourseListItem(props) {
             Idade: {course.age}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            Membro desde: {course.createdAt}
+            Curso criado em: {course.createdAt}
           </Typography>
         </CardContent>
       </Card>

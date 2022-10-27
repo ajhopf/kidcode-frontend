@@ -5,7 +5,6 @@ import MainNav from '../molecules/MainNav';
 
 export default function Default(props) {
   const [courses, setCourses] = React.useState([]);
-
   const [isHeaderActive, setIsHeaderActive] = React.useState(false);
 
   React.useEffect(() => {
